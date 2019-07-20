@@ -3,11 +3,24 @@
         <title>Controlando as IRAS</title>
     </head>
     <body>
+
+            <div>
+                    <h1><a href="/">Django Girls Blog</a></h1>
+                </div>
+                
+                {% for post in posts %}
+                    <div>
+                        <p>published: {{ post.published_date }}</p>
+                        <h2><a href="">{{ post.title }}</a></h2>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
         <div>
             <h1><a href="/">Blog prevenção da Infecção</a></h1>
         </div>
-
+        {{ posts }}
         <div>
+                {{ posts }}
             <p>publicado: 20.07.2019, 14:32</p>
             <h2><a href="">Meu primeiro post</a></h2>
             <p>Vamos começar!!! .</p>
